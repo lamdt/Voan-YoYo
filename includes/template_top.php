@@ -64,4 +64,4 @@ $.datepicker.setDefaults($.datepicker.regional['<?php echo JQUERY_DATEPICKER_I18
   <div class=""><?php echo '&nbsp;&nbsp;' . $breadcrumb->trail(' &raquo; '); ?></div>
 </div>
 
-<p> <?php include("hula_slide.php");?> </p>
+<p> <?php if(!isset($_GET['products_id']) ) include("hula_slide.php");?> </p>

@@ -39,7 +39,7 @@
     $category = tep_db_fetch_array($category_query);
 ?>
 
-<h1><?php echo $category['categories_name']; ?></h1>
+<h1 id="hula_title"><?php echo $category['categories_name']; ?></h1>
 
 <div class="contentContainer">
   <div class="contentText">
@@ -204,7 +204,8 @@
     }
 ?>
 
-<h1><?php echo $catname; ?></h1>
+<!--catalog detail-->
+<h1 id='hula_title'><?php echo $catname; ?></h1>
 
 <div class="contentContainer">
 

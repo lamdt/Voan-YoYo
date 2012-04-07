@@ -36,3 +36,10 @@
 
 # php_value session.use_trans_sid 0
 # php_value register_globals 1
+
+##### OSCOMMERCE ADMIN PROTECTION - BEGIN #####
+AuthType Basic
+AuthName "osCommerce Online Merchant Administration Tool"
+AuthUserFile /opt/lampp/htdocs/test/MVCtesting/os/admin/.htpasswd_oscommerce
+Require valid-user
+##### OSCOMMERCE ADMIN PROTECTION - END #####

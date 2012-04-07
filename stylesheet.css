@@ -24,8 +24,13 @@
 
 }
 
+#hula_line_bottom{
+  height: 4px;
+  background: grey;
+}
+
 /*Catelog name*/
-h1, h2{
+#hula_title, h2{
     padding: 7px 0 5px 35px;
     text-shadow: 1px 1px 0 #fff;
     background: url("http://static.mp3.zdn.vn/skins/mp3_version3_05/images/icon-24.png") repeat-x scroll left top #1C1C1C;

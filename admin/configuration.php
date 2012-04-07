@@ -139,6 +139,24 @@
       </tr>
     </table>
 
+<?php 
+  switch($_GET['gID'])
+  {
+    case '16':
+      include ("hula_condition.php");
+      break;
+    case '17':
+      include ("hula_privacy.php");
+      break;
+    case '18':
+      include ("hula_about.php");
+      break;
+    case '19':
+      include ("hula_slide.php");
+      break;
+  }
+?>
+
 <?php
   require(DIR_WS_INCLUDES . 'template_bottom.php');
   require(DIR_WS_INCLUDES . 'application_bottom.php');

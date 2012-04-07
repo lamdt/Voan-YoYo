@@ -23,7 +23,7 @@
 
 <div class="contentContainer">
   <div class="contentText">
-    <?php echo TEXT_INFORMATION; ?>
+    <p>sửa nội dung tại file privacy.php</p>
   </div>
 
   <div class="buttonSet">

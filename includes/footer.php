@@ -1,3 +1,5 @@
+
+
 <?php
 /*
   $Id$
@@ -14,7 +16,11 @@
 ?>
 
 <div class="grid_24 footer">
-  <p align="center"><?php echo FOOTER_TEXT_BODY; ?></p>
+  <p id="hula_line_bottom"></p> <!--line bottom-->
+  <p align="center"><?php echo FOOTER_TEXT_BODY; ?>
+  || 
+  <span>Designed and Developed by <a href=''>HuLaSoft</a></span>
+  </p>
 </div>
 
 <?php
