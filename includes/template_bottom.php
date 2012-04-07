@@ -13,6 +13,7 @@
 
 </div> <!-- bodyContent //-->
 
+
 <?php
   if ($oscTemplate->hasBlocks('boxes_column_left')) {
 ?>
@@ -41,5 +42,6 @@
 
 <?php echo $oscTemplate->getBlocks('footer_scripts'); ?>
 
+</div>
 </body>
 </html>

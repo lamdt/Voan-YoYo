@@ -50,13 +50,18 @@ $.datepicker.setDefaults($.datepicker.regional['<?php echo JQUERY_DATEPICKER_I18
 </head>
 <body>
 
+<div id="wrapper">
+
 <div id="bodyWrapper" class="container_<?php echo $oscTemplate->getGridContainerWidth(); ?>">
 <?php require(DIR_WS_INCLUDES . 'header.php'); ?>
 
 
+
+
+<div id="bodyContent" class="grid_<?php echo $oscTemplate->getGridContentWidth(); ?> <?php echo ($oscTemplate->hasBlocks('boxes_column_left') ? 'push_' . $oscTemplate->getGridColumnWidth() : ''); ?>">
 <!--Navigation-->
 <div class=" my_navi" >
   <div class=""><?php echo '&nbsp;&nbsp;' . $breadcrumb->trail(' &raquo; '); ?></div>
 </div>
 
-<div id="bodyContent" class="grid_<?php echo $oscTemplate->getGridContentWidth(); ?> <?php echo ($oscTemplate->hasBlocks('boxes_column_left') ? 'push_' . $oscTemplate->getGridColumnWidth() : ''); ?>">
+<p> <?php include("hula_slide.php");?> </p>
