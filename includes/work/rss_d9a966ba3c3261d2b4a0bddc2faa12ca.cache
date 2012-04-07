@@ -1,0 +1,22 @@
+a:12:{s:8:"encoding";s:5:"UTF-8";s:5:"title";s:24:"osCommerce Contributions";s:4:"link";s:25:"http://www.oscommerce.com";s:11:"description";s:29:"osCommerce, Sell With Emotion";s:8:"language";s:2:"en";s:9:"copyright";s:29:"Copyright (c) 2010 osCommerce";s:14:"managingEditor";s:19:"hpdl@oscommerce.com";s:11:"image_title";s:10:"osCommerce";s:9:"image_url";s:53:"http://www.oscommerce.com/images/oscommerce_88x31.gif";s:10:"image_link";s:25:"http://www.oscommerce.com";s:5:"items";a:5:{i:0;a:4:{s:5:"title";s:32:"USPS Rates ServerV4 (for osc2.2)";s:4:"link";s:38:"http://addons.oscommerce.com/info/8403";s:11:"description";s:40:"Added international first class envelope";s:7:"pubDate";s:31:"Fri, 06 Apr 2012 07:08:13 -0400";}i:1;a:4:{s:5:"title";s:30:"Simple Checkout for 2.3.1 v1.0";s:4:"link";s:38:"http://addons.oscommerce.com/info/8338";s:11:"description";s:224:"v2.0 and v2.1 are NO GOOD!!<br />
+<br />
+Major fix - all payments that were going to offsite payment processing pages weren't being sent the information they needed.<br />
+<br />
+One line fix<br />
+<br />
+Full Package.<br />";s:7:"pubDate";s:31:"Fri, 06 Apr 2012 04:28:02 -0400";}i:2;a:4:{s:5:"title";s:12:"Social Login";s:4:"link";s:38:"http://addons.oscommerce.com/info/8306";s:11:"description";s:183:"Change log:<br />
+1. Added interface customization for language, social icon set and theme<br />
+2. Added More user profile data.<br />
+3. Bug fixed for https redirection issue.<br />";s:7:"pubDate";s:31:"Fri, 06 Apr 2012 01:46:57 -0400";}i:3;a:4:{s:5:"title";s:30:"Newletters Subscribers Manager";s:4:"link";s:38:"http://addons.oscommerce.com/info/8402";s:11:"description";s:429:"Cette contribution permet aux visiteurs de s'inscrire &agrave; la newsletter (sans qu'ils soient clients), elle permet de g&eacute;rer (modifier, supprimer, envoyer) les newsletters et de g&eacute;rer les abonn&eacute;s.<br />
+<br />
+-----------------<br />
+<br />
+This contribution allows visitors to subscribe to the newsletter (without being customers), it can manage (modify, delete, send) newsletters and manage subscribers.";s:7:"pubDate";s:31:"Thu, 05 Apr 2012 12:45:01 -0400";}i:4;a:4:{s:5:"title";s:9:"ATOS v1.0";s:4:"link";s:38:"http://addons.oscommerce.com/info/8401";s:11:"description";s:721:"Cette contribution permet aux clients de payer par carte bancaire, la solution ATOS est un TPE  propos&eacute; par un grand nombre de banques (banque populaire, soci&eacute;t&eacute; g&eacute;n&eacute;rale, la poste, cr&eacute;dit agricole, bnp paribas, ...), cette version est sous licence GPL.<br />
+<br />
+Cette version de ATOS V 1.0 renferme 2 versions :<br />
+<br />
+1) Le dossier atos_v1.0_avec_retour_automatique_boutique renferme une version avec un retour automatique &agrave; la boutique apr&egrave;s le traitement de la transaction.<br />
+ <br />
+2) Le dossier atos_v1.0_classic referme une version classique de ATOS sans retour automatique &agrave; la boutique.<br />
+<br />
+Cette version est compatible PHP5+";s:7:"pubDate";s:31:"Thu, 05 Apr 2012 04:01:32 -0400";}}s:11:"items_count";i:5;}
