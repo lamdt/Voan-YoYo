@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 3.4.5
+-- version 3.3.9
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 07, 2012 at 06:53 PM
--- Server version: 5.5.16
--- PHP Version: 5.3.8
+-- Generation Time: Apr 07, 2012 at 07:56 PM
+-- Server version: 5.5.8
+-- PHP Version: 5.3.5
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -39,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `action_recorder` (
   KEY `idx_action_recorder_user_id` (`user_id`),
   KEY `idx_action_recorder_identifier` (`identifier`),
   KEY `idx_action_recorder_date_added` (`date_added`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
 
 --
 -- Dumping data for table `action_recorder`
@@ -50,7 +49,8 @@ INSERT INTO `action_recorder` (`id`, `module`, `user_id`, `user_name`, `identifi
 (2, 'ar_admin_login', 1, 'lamdt', '127.0.0.1', '1', '2012-04-06 22:20:14'),
 (3, 'ar_admin_login', 1, 'lamdt', '127.0.0.1', '1', '2012-04-06 23:03:17'),
 (4, 'ar_admin_login', 1, 'lamdt', '127.0.0.1', '1', '2012-04-07 00:40:34'),
-(5, 'ar_admin_login', 1, 'lamdt', '127.0.0.1', '1', '2012-04-07 22:26:00');
+(5, 'ar_admin_login', 1, 'lamdt', '127.0.0.1', '1', '2012-04-07 22:26:00'),
+(6, 'ar_admin_login', 1, 'lamdt', '127.0.0.1', '1', '2012-04-08 00:24:06');
 
 -- --------------------------------------------------------
 
@@ -75,6 +75,11 @@ CREATE TABLE IF NOT EXISTS `address_book` (
   PRIMARY KEY (`address_book_id`),
   KEY `idx_address_book_customers_id` (`customers_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `address_book`
+--
+
 
 -- --------------------------------------------------------
 
@@ -589,7 +594,7 @@ CREATE TABLE IF NOT EXISTS `counter` (
 --
 
 INSERT INTO `counter` (`startdate`, `counter`) VALUES
-('20120406', 185);
+('20120406', 198);
 
 -- --------------------------------------------------------
 
@@ -601,6 +606,11 @@ CREATE TABLE IF NOT EXISTS `counter_history` (
   `month` char(8) DEFAULT NULL,
   `counter` int(12) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `counter_history`
+--
+
 
 -- --------------------------------------------------------
 
@@ -914,6 +924,11 @@ CREATE TABLE IF NOT EXISTS `customers` (
   KEY `idx_customers_email_address` (`customers_email_address`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+--
+-- Dumping data for table `customers`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -931,6 +946,11 @@ CREATE TABLE IF NOT EXISTS `customers_basket` (
   KEY `idx_customers_basket_customers_id` (`customers_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+--
+-- Dumping data for table `customers_basket`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -947,6 +967,11 @@ CREATE TABLE IF NOT EXISTS `customers_basket_attributes` (
   KEY `idx_customers_basket_att_customers_id` (`customers_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+--
+-- Dumping data for table `customers_basket_attributes`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -962,6 +987,11 @@ CREATE TABLE IF NOT EXISTS `customers_info` (
   `global_product_notifications` int(1) DEFAULT '0',
   PRIMARY KEY (`customers_info_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `customers_info`
+--
+
 
 -- --------------------------------------------------------
 
@@ -984,6 +1014,26 @@ CREATE TABLE IF NOT EXISTS `geo_zones` (
 
 INSERT INTO `geo_zones` (`geo_zone_id`, `geo_zone_name`, `geo_zone_description`, `last_modified`, `date_added`) VALUES
 (1, 'Florida', 'Florida local sales tax zone', NULL, '2012-04-06 21:56:52');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hula_our_infos`
+--
+
+CREATE TABLE IF NOT EXISTS `hula_our_infos` (
+  `type` varchar(20) NOT NULL,
+  `content` text CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `hula_our_infos`
+--
+
+INSERT INTO `hula_our_infos` (`type`, `content`) VALUES
+('conditions', 'co tien thi mua'),
+('about', 'hula soft'),
+('privacy', 'hahah');
 
 -- --------------------------------------------------------
 
@@ -1090,6 +1140,11 @@ CREATE TABLE IF NOT EXISTS `newsletters` (
   PRIMARY KEY (`newsletters_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+--
+-- Dumping data for table `newsletters`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -1143,6 +1198,11 @@ CREATE TABLE IF NOT EXISTS `orders` (
   KEY `idx_orders_customers_id` (`customers_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+--
+-- Dumping data for table `orders`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -1164,6 +1224,11 @@ CREATE TABLE IF NOT EXISTS `orders_products` (
   KEY `idx_orders_products_products_id` (`products_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+--
+-- Dumping data for table `orders_products`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -1182,6 +1247,11 @@ CREATE TABLE IF NOT EXISTS `orders_products_attributes` (
   KEY `idx_orders_products_att_orders_id` (`orders_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+--
+-- Dumping data for table `orders_products_attributes`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -1198,6 +1268,11 @@ CREATE TABLE IF NOT EXISTS `orders_products_download` (
   PRIMARY KEY (`orders_products_download_id`),
   KEY `idx_orders_products_download_orders_id` (`orders_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `orders_products_download`
+--
+
 
 -- --------------------------------------------------------
 
@@ -1242,6 +1317,11 @@ CREATE TABLE IF NOT EXISTS `orders_status_history` (
   KEY `idx_orders_status_history_orders_id` (`orders_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+--
+-- Dumping data for table `orders_status_history`
+--
+
+
 -- --------------------------------------------------------
 
 --
@@ -1259,6 +1339,11 @@ CREATE TABLE IF NOT EXISTS `orders_total` (
   PRIMARY KEY (`orders_total_id`),
   KEY `idx_orders_total_orders_id` (`orders_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `orders_total`
+--
+
 
 -- --------------------------------------------------------
 
@@ -1465,6 +1550,11 @@ CREATE TABLE IF NOT EXISTS `products_notifications` (
   `date_added` datetime NOT NULL,
   PRIMARY KEY (`products_id`,`customers_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `products_notifications`
+--
+
 
 -- --------------------------------------------------------
 
@@ -1693,7 +1783,9 @@ CREATE TABLE IF NOT EXISTS `sessions` (
 
 INSERT INTO `sessions` (`sesskey`, `expiry`, `value`) VALUES
 ('6od4f4h72ofprtamu7k8kqgrh1', 1333817930, 'sessiontoken|s:32:"c0667b2a0087206632c91c31aab84898";cart|O:12:"shoppingCart":5:{s:8:"contents";a:0:{}s:5:"total";i:0;s:6:"weight";i:0;s:6:"cartID";N;s:12:"content_type";b:0;}language|s:7:"english";languages_id|s:1:"1";currency|s:3:"USD";navigation|O:17:"navigationHistory":2:{s:4:"path";a:3:{i:0;a:4:{s:4:"page";s:9:"index.php";s:4:"mode";s:6:"NONSSL";s:3:"get";a:0:{}s:4:"post";a:0:{}}i:1;a:4:{s:4:"page";s:11:"privacy.php";s:4:"mode";s:6:"NONSSL";s:3:"get";a:0:{}s:4:"post";a:0:{}}i:2;a:4:{s:4:"page";s:12:"shipping.php";s:4:"mode";s:6:"NONSSL";s:3:"get";a:0:{}s:4:"post";a:0:{}}}s:8:"snapshot";a:0:{}}'),
-('qdsurkmva4f5geeii387sptm12', 1333818847, 'language|s:7:"english";languages_id|s:1:"1";admin|a:2:{s:2:"id";s:1:"1";s:8:"username";s:5:"lamdt";}');
+('os45ab39gj3fdoametsbo6o4b0', 1333821276, 'sessiontoken|s:32:"13356075e39de5d47e5e88328e662755";cart|O:12:"shoppingCart":5:{s:8:"contents";a:0:{}s:5:"total";i:0;s:6:"weight";i:0;s:6:"cartID";N;s:12:"content_type";b:0;}language|s:7:"english";languages_id|s:1:"1";currency|s:3:"USD";navigation|O:17:"navigationHistory":2:{s:4:"path";a:2:{i:0;a:4:{s:4:"page";s:9:"index.php";s:4:"mode";s:6:"NONSSL";s:3:"get";a:0:{}s:4:"post";a:0:{}}i:1;a:4:{s:4:"page";s:12:"shipping.php";s:4:"mode";s:6:"NONSSL";s:3:"get";a:0:{}s:4:"post";a:0:{}}}s:8:"snapshot";a:0:{}}'),
+('qdsurkmva4f5geeii387sptm12', 1333818847, 'language|s:7:"english";languages_id|s:1:"1";admin|a:2:{s:2:"id";s:1:"1";s:8:"username";s:5:"lamdt";}'),
+('ug0ru3515vukalaeomc6fp2na3', 1333821364, 'language|s:7:"english";languages_id|s:1:"1";admin|a:2:{s:2:"id";s:1:"1";s:8:"username";s:5:"lamdt";}');
 
 -- --------------------------------------------------------
 
@@ -1792,7 +1884,7 @@ CREATE TABLE IF NOT EXISTS `whos_online` (
 --
 
 INSERT INTO `whos_online` (`customer_id`, `full_name`, `session_id`, `ip_address`, `time_entry`, `time_last_click`, `last_page_url`) VALUES
-(0, 'Guest', '6od4f4h72ofprtamu7k8kqgrh1', '127.0.0.1', '1333816490', '1333816490', '/test/MVCtesting/os/shipping.php');
+(0, 'Guest', 'os45ab39gj3fdoametsbo6o4b0', '127.0.0.1', '1333818649', '1333819836', '/OSE/Voan-YoYo/shipping.php');
 
 -- --------------------------------------------------------
 
@@ -2019,7 +2111,3 @@ CREATE TABLE IF NOT EXISTS `zones_to_geo_zones` (
 
 INSERT INTO `zones_to_geo_zones` (`association_id`, `zone_country_id`, `zone_id`, `geo_zone_id`, `last_modified`, `date_added`) VALUES
 (1, 223, 18, 1, NULL, '2012-04-06 21:56:52');
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
