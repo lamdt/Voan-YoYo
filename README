@@ -1,1 +1,5 @@
 First osEcommerce project by Cici and HVN
+
+NOTE:
+change configuration.php in include and in admin/include to your URL
+
