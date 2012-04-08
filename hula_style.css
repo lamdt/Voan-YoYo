@@ -13,6 +13,9 @@ hula_
     width: 167px;
 }
 
+#hula_searchBoxOne {
+    margin-top: -11px;
+}
 
 /*navi*/
 .my_navi{
