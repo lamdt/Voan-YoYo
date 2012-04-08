@@ -17,5 +17,6 @@ Notification:
 		Privacy -> hula_privacy.php (not done)
 		About -> hula_about.php (not done)
 		Condition -> hula_condition.php (not done)
-	Chuyen Manufacturers Module thanh dang cot. (not done)
-	Code search bar -> header (not done)
+	Chuyen Manufacturers Module thanh dang cot. (done)
+	Code search bar -> header (done)
+	Quick Search Module -> Search by Cost (not done)
