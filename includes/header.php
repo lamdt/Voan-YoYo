@@ -28,17 +28,21 @@
     echo tep_draw_button(HEADER_TITLE_LOGOFF, null, tep_href_link(FILENAME_LOGOFF, '', 'SSL'));
   }
 ?>
+<br><br>
+<div id="hula_searchBoxOne">
+
+<form method="get" action="advanced_search_result.php" name="quick_find">
+  <input type="text" id="hula_search" name="keywords" value="<?php echo $_GET['keywords']?>"/>
+  <input type="hidden" value="1" name="search_in_description">
+  <input type="submit" >
+</form>
+</div>
   </div>
 
 <script type="text/javascript">
   $("#headerShortcuts").buttonset();
 </script>
 </div>
-<!--Menu 
-<div class="grid_24">
-  <div class=""><?php require(DIR_WS_INCLUDES . 'hula_menubar.php'); ?></div>
-</div>
-bar here-->
 
 <?php
   if (isset($HTTP_GET_VARS['error_message']) && tep_not_null($HTTP_GET_VARS['error_message'])) {

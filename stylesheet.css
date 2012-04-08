@@ -11,6 +11,10 @@
 
 
 /* my customize*/
+#wrapper {
+    background: url("images/body_bg.png") repeat-x scroll left -56px transparent;
+    height: 192px;
+}
 
 .ui-widget {
   font-family: Lucida Grande, Lucida Sans, Verdana, Arial, sans-serif;
@@ -32,7 +36,7 @@ body {
 }
 
 #header {
-  height: 90px;
+  height: 120px;
   margin-top:15px;
 }
 

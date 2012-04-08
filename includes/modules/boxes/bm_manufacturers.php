@@ -66,10 +66,17 @@
                      tep_draw_pull_down_menu('manufacturers_id', $manufacturers_array, (isset($HTTP_GET_VARS['manufacturers_id']) ? $HTTP_GET_VARS['manufacturers_id'] : ''), 'onchange="this.form.submit();" size="' . MAX_MANUFACTURERS_LIST . '" style="width: 100%"') . tep_hide_session_id() .
                      '</form>';
         }
-
+        
+        $list ='';
+        $manufacturers_query = tep_db_query("select * from manufacturers order by rand() limit 0,5");
+        while($row = tep_db_fetch_array($manufacturers_query))
+        {
+                $list .=  "<a href='index.php?manufacturers_id=".$row['manufacturers_id']."'>".$row['manufacturers_name']."</a><br />";
+        }
+        
         $data = '<div class="ui-widget infoBoxContainer">' .
                   '  <div class="ui-widget-header infoBoxHeading">' . MODULE_BOXES_MANUFACTURERS_BOX_TITLE . '</div>' .
-                  '  <div class="ui-widget-content infoBoxContents">' . $content . '</div>' .
+                  '  <div class="ui-widget-content infoBoxContents">'.$list."More:".$content . '</div>'.
                   '</div>';
       }
 
@@ -108,6 +115,15 @@
 
     function keys() {
       return array('MODULE_BOXES_MANUFACTURERS_STATUS', 'MODULE_BOXES_MANUFACTURERS_CONTENT_PLACEMENT', 'MODULE_BOXES_MANUFACTURERS_SORT_ORDER');
+    }
+    
+    function hula_ListRandomManufactures()
+    {
+      $manufacturers_query = tep_db_query("select * from manufacturers order by rand() limit 0,5");
+      while($row = tep_db_fetch_array($manufacturers_query))
+      {
+        return "<a href='index.php?manufacturers_id='".$row['manufacturers_id']."' > ".$row['manufacturers_name']."</a>";
+      }
     }
   }
 ?>

@@ -31,6 +31,8 @@ $('#s6').cycle({
     <img src="http://cdn.crackberry.com/files/blackberry-bold-9780/blackberry-bold-9780-rogers.jpg" width="630" height="243" />
     <img src="http://www.cellphonehits.net/site/uploads/HTC-Sensation-XE-O2-UK.jpg" width="630" height="243" />
 </div>
+<br />
+
 </body>
 </html>
 

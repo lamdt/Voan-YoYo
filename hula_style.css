@@ -2,12 +2,22 @@
 hula_
 08/04/2012 09:48:27 
 */
+/*search bar*/
+#hula_searchBoxOne #hula_search{
+   background: #fff;
+    border-radius: 4px 0 0 4px;
+    background: url("images/ui-bg_glass_85_dfeffc_1x400.png") repeat-x scroll 50% 50% #DFEFFC;
+    border: 1px solid #C5DBEC;
+    color: #2E6E9E;
+    height: 20px;
+    width: 167px;
+}
+
 
 /*navi*/
-
 .my_navi{
   margin-bottom: 5px;
-  margin-top: 5px;
+  margin-top: -11px;
   color: #000;
   text-transform: uppercase;
   background: url(images/line.png) repeat-x left bottom #fff;

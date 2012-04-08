@@ -1,7 +1,7 @@
 <?php
 /*
   $Id$
-
+ Replacement by lamdt
   osCommerce, Open Source E-Commerce Solutions
   http://www.oscommerce.com
 
@@ -32,12 +32,20 @@
 
     function execute() {
       global $oscTemplate;
-
+/*
+ tep_draw_form('quick_find', tep_href_link(FILENAME_ADVANCED_SEARCH_RESULT, '', 'NONSSL', false), 'get') .
+              '    ' . tep_draw_input_field('keywords', '', 'size="10" maxlength="30" style="width: 75%"') . '&nbsp;' . tep_draw_hidden_field('search_in_description', '1') . tep_hide_session_id() . tep_image_submit('button_quick_find.gif', MODULE_BOXES_SEARCH_BOX_TITLE) . '<br />' . MODULE_BOXES_SEARCH_BOX_TEXT . '<br />
+*/
       $data = '<div class="ui-widget infoBoxContainer">' .
-              '  <div class="ui-widget-header infoBoxHeading">' . MODULE_BOXES_SEARCH_BOX_TITLE . '</div>' .
+              '  <div class="ui-widget-header infoBoxHeading">' . SEARCH_BY_COST . '</div>' .
               '  <div class="ui-widget-content infoBoxContents" style="text-align: center;">' .
-              '    ' . tep_draw_form('quick_find', tep_href_link(FILENAME_ADVANCED_SEARCH_RESULT, '', 'NONSSL', false), 'get') .
-              '    ' . tep_draw_input_field('keywords', '', 'size="10" maxlength="30" style="width: 75%"') . '&nbsp;' . tep_draw_hidden_field('search_in_description', '1') . tep_hide_session_id() . tep_image_submit('button_quick_find.gif', MODULE_BOXES_SEARCH_BOX_TITLE) . '<br />' . MODULE_BOXES_SEARCH_BOX_TEXT . '<br /><a href="' . tep_href_link(FILENAME_ADVANCED_SEARCH) . '"><strong>' . MODULE_BOXES_SEARCH_BOX_ADVANCED_SEARCH . '</strong></a>' .
+              '  
+               <form onsubmit="return check_form(this);" method="get" action="advanced_search_result.php" name="advanced_search">
+               '.SEARCH_BY_COST_FROM.':<br />'.tep_draw_input_field('pfrom', '', 'size="10" maxlength="30" style="width: 50%"').'<br />'.SEARCH_BY_COST_TO.':<br />'.tep_draw_input_field('pto', '', 'size="10" maxlength="30" style="width: 50%"')
+               .'<br />Catelog: <br />'.tep_draw_pull_down_menu('manufacturers_id', tep_get_manufacturers(array(array('id' => '', 'text' => TEXT_ALL_MANUFACTURERS)))).'
+               <br /><button type="submit" id="tdb4">Search</button>
+               </form>
+               '.'<br /><br /><a href="' . tep_href_link(FILENAME_ADVANCED_SEARCH) . '"> <strong>' . MODULE_BOXES_SEARCH_BOX_ADVANCED_SEARCH . '</strong></a>' .
               '    </form>' .
               '  </div>' .
               '</div>';

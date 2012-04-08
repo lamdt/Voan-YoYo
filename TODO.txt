@@ -19,4 +19,5 @@ Notification:
 		Condition -> hula_condition.php (not done)
 	Chuyen Manufacturers Module thanh dang cot. (done)
 	Code search bar -> header (done)
-	Quick Search Module -> Search by Cost (not done)
+	Quick Search Module -> Search by Cost (done)
+	Code order products by cose(DESC.| ASC);
