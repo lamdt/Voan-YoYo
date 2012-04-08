@@ -23,7 +23,11 @@
 
 <div class="contentContainer">
   <div class="contentText">
-    <p>sửa nội dung tại file privacy.php</p>
+    <?php 
+      $privacy_query = tep_db_query("select content from hula_our_infos where type = '".privacy."' ");
+      $row = tep_db_fetch_array($privacy_query);
+      echo $row['content'];
+    ?>
   </div>
 
   <div class="buttonSet">

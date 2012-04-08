@@ -33,10 +33,6 @@
     function tep_show_category($counter) {
       global $tree, $categories_string, $cPath_array;
 
-      for ($i=0; $i<$tree[$counter]['level']; $i++) {
-        $categories_string .= "&nbsp;&nbsp;";
-      }
-
       $categories_string .= '<a href="';
 
       if ($tree[$counter]['parent'] == 0) {
@@ -45,24 +41,29 @@
         $cPath_new = 'cPath=' . $tree[$counter]['path'];
       }
 
-      $categories_string .= tep_href_link(FILENAME_DEFAULT, $cPath_new) . '">';
+      $categories_string .= tep_href_link(FILENAME_DEFAULT, $cPath_new) . '"><p class="hula_CategoriesName hula_CategoriesNamebg ';
 
       if (isset($cPath_array) && in_array($counter, $cPath_array)) {
-        $categories_string .= '<strong>';
+        $categories_string .= ' hula_isCurentCategory';
       }
+
+        $categories_string .= '">' ;
+
+      for ($i=0; $i<$tree[$counter]['level']; $i++) {
+        $categories_string .= "&raquo;&nbsp;";
+      }
+
 
 // display category name
       $categories_string .= $tree[$counter]['name'];
 
       if (isset($cPath_array) && in_array($counter, $cPath_array)) {
-        $categories_string .= '</strong>';
+        $categories_string .= '';
       }
-
+      
       if (tep_has_category_subcategories($counter)) {
         $categories_string .= '-&gt;';
       }
-
-      $categories_string .= '</a>';
 
       if (SHOW_COUNTS == 'true') {
         $products_in_category = tep_count_products_in_category($counter);
@@ -71,7 +72,8 @@
         }
       }
 
-      $categories_string .= '<br />';
+      $categories_string .= '</p></a>';
+
 
       if ($tree[$counter]['next_id'] != false) {
         $this->tep_show_category($tree[$counter]['next_id']);
@@ -142,9 +144,10 @@
 
       $this->tep_show_category($first_element);
 
+# define module categories
       $data = '<div class="ui-widget infoBoxContainer">' .
               '  <div class="ui-widget-header infoBoxHeading">' . MODULE_BOXES_CATEGORIES_BOX_TITLE . '</div>' .
-              '  <div class="ui-widget-content infoBoxContents">' . $categories_string . '</div>' .
+              '  <div class=" hula_CategoriesContent">' . $categories_string . '</div>' .
               '</div>';
 
       return $data;

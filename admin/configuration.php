@@ -154,6 +154,9 @@
     case '19':
       include ("hula_slide.php");
       break;
+    case '20':
+      include ("hula_shipping.php");
+      break;
   }
 ?>
 

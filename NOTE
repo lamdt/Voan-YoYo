@@ -1,0 +1,5 @@
+Javascript + Css input -> includes/header.php
+Logo + menu header -> includes/header.php + template_top.php
+Footer -> includes/header.php + template_bottom.php
+Slide -> includes/hula_slide.php
+Module Categories -> includes/modules/boxes/bm_categories

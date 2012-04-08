@@ -23,7 +23,11 @@
 
 <div class="contentContainer">
   <div class="contentText">
-    <?php echo TEXT_INFORMATION; ?>
+    <?php 
+      $condition_query = tep_db_query("select content from ".TABLE_HULA_OUR_INFOS." where type = '".conditions."' ");
+      $row = tep_db_fetch_array($condition_query);
+      echo $row['content'];
+    ?>
   </div>
 
   <div class="buttonSet">

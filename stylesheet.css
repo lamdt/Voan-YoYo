@@ -12,37 +12,6 @@
 
 /* my customize*/
 
-.my_navi{
-  margin-bottom: 5px;
-  margin-top: 5px;
-  color: #000;
-  text-transform: uppercase;
-}
-
-.my_navi:hover
-{
-
-}
-
-#hula_line_bottom{
-  height: 4px;
-  background: grey;
-}
-
-/*Catelog name*/
-#hula_title, h2{
-    padding: 7px 0 5px 35px;
-    text-shadow: 1px 1px 0 #fff;
-    background: url("http://static.mp3.zdn.vn/skins/mp3_version3_05/images/icon-24.png") repeat-x scroll left top #1C1C1C;
-    background-position:left -711px;
-    color: #333333;
-    height: 18px;
-    text-transform: uppercase;
-    font-size: 14px;
-    margin-bottom: 0;
-
-}
-
 .ui-widget {
   font-family: Lucida Grande, Lucida Sans, Verdana, Arial, sans-serif;
   font-size: 11px;
@@ -78,11 +47,11 @@ body {
 }
 
 #columnLeft {
-  padding-top: 5px;
+  box-shadow: 0 0 2px #DFDFDF;
 }
 
 #columnRight {
-  padding-top: 5px;
+  box-shadow: 0 0 2px #DFDFDF;
 }
 
 .infoBoxContainer { }
@@ -115,6 +84,12 @@ body {
   padding: 5px 0 5px 0;
   font-size: 11px;
   line-height: 1.5;
+
+}
+
+.contentTeaxt{
+  border: 1px solid #CCCCCC;
+  border-radius: 5px;
 }
 
 .productListTable {

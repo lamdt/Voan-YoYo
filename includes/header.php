@@ -34,8 +34,11 @@
   $("#headerShortcuts").buttonset();
 </script>
 </div>
-
-
+<!--Menu 
+<div class="grid_24">
+  <div class=""><?php require(DIR_WS_INCLUDES . 'hula_menubar.php'); ?></div>
+</div>
+bar here-->
 
 <?php
   if (isset($HTTP_GET_VARS['error_message']) && tep_not_null($HTTP_GET_VARS['error_message'])) {
@@ -58,3 +61,4 @@
 <?php
   }
 ?>
+
