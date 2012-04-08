@@ -1,4 +1,3 @@
-//text ckeditor
 
 <script type="text/javascript" src="../ext/fckeditor/fckeditor.js"></script>
 <script type="text/javascript" src="../ext/fckeditor/fckconfig.js"></script>
@@ -14,6 +13,14 @@
 </script>
 
 
-<textarea id="ckeditor" name="content" cols="150"> </textarea>
+<textarea id="ckeditor" name="content" cols="150"> 
+<?php
+	$sql = "SELECT content FROM ".TABLE_HULA_OUR_INFOS." WHERE type='about'";
+	$result = tep_db_query($sql);
+
+	while(($row = tep_db_fetch_array($result)) != null)
+		echo $row['content'];
+?>
+</textarea>
 
 
