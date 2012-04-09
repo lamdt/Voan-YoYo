@@ -13,10 +13,10 @@ Notification:
 
 04/08/12 
 	Code back end :
-		Shipping Info -> hula_shipping.php (not done)
-XONG |		Privacy -> hula_privacy.php (not done)
-XONG |		About -> hula_about.php (not done)
-XONG |		Condition -> hula_condition.php (not done)
+		Shipping Info -> hula_shipping.php (not done) //Chua day duoc vao db
+		Privacy -> hula_privacy.php (not done) //Chua day duoc vao db
+		About -> hula_about.php (not done) //Chua day duoc vao db
+		Condition -> hula_condition.php (not done) //Chua day duoc vao db
 
 	Chuyen Manufacturers Module thanh dang cot. (done)
 	Code search bar -> header (done)
