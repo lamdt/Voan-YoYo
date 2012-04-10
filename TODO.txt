@@ -15,7 +15,8 @@ Notification:
 	Code back end :
 		Shipping Info -> hula_shipping.php (not done) //Chua day duoc vao db
 		Privacy -> hula_privacy.php (not done) //Chua day duoc vao db
-		About -> hula_about.php (not done) //Chua day duoc vao db
+DONE	About -> hula_about.php
+port to 3 remain tonight ;)
 		Condition -> hula_condition.php (not done) //Chua day duoc vao db
 
 	Chuyen Manufacturers Module thanh dang cot. (done)
