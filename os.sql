@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 07, 2012 at 07:56 PM
+-- Generation Time: Apr 12, 2012 at 04:27 AM
 -- Server version: 5.5.8
 -- PHP Version: 5.3.5
 
@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `action_recorder` (
   KEY `idx_action_recorder_user_id` (`user_id`),
   KEY `idx_action_recorder_identifier` (`identifier`),
   KEY `idx_action_recorder_date_added` (`date_added`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `action_recorder`
@@ -50,7 +50,13 @@ INSERT INTO `action_recorder` (`id`, `module`, `user_id`, `user_name`, `identifi
 (3, 'ar_admin_login', 1, 'lamdt', '127.0.0.1', '1', '2012-04-06 23:03:17'),
 (4, 'ar_admin_login', 1, 'lamdt', '127.0.0.1', '1', '2012-04-07 00:40:34'),
 (5, 'ar_admin_login', 1, 'lamdt', '127.0.0.1', '1', '2012-04-07 22:26:00'),
-(6, 'ar_admin_login', 1, 'lamdt', '127.0.0.1', '1', '2012-04-08 00:24:06');
+(6, 'ar_admin_login', 1, 'lamdt', '127.0.0.1', '1', '2012-04-08 00:24:06'),
+(7, 'ar_admin_login', 1, 'lamdt', '127.0.0.1', '1', '2012-04-08 01:03:26'),
+(8, 'ar_admin_login', 1, 'lamdt', '127.0.0.1', '1', '2012-04-08 23:36:30'),
+(9, 'ar_admin_login', 1, 'lamdt', '127.0.0.1', '1', '2012-04-10 00:32:21'),
+(10, 'ar_admin_login', 1, 'lamdt', '127.0.0.1', '1', '2012-04-10 09:55:42'),
+(11, 'ar_admin_login', 1, 'lamdt', '127.0.0.1', '1', '2012-04-11 09:04:12'),
+(12, 'ar_admin_login', 1, 'lamdt', '127.0.0.1', '1', '2012-04-12 09:26:53');
 
 -- --------------------------------------------------------
 
@@ -551,7 +557,7 @@ CREATE TABLE IF NOT EXISTS `configuration_group` (
   `sort_order` int(5) DEFAULT NULL,
   `visible` int(1) DEFAULT '1',
   PRIMARY KEY (`configuration_group_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=20 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=21 ;
 
 --
 -- Dumping data for table `configuration_group`
@@ -576,7 +582,8 @@ INSERT INTO `configuration_group` (`configuration_group_id`, `configuration_grou
 (16, 'Conditions', 'Conditions Edit', 16, 1),
 (17, 'Privacy', 'Privacy Edit', 17, 1),
 (18, 'About', 'About Us Edit', 18, 1),
-(19, 'Slide Management', 'Slide Management', 19, 1);
+(19, 'Slide Management', 'Slide Management', 19, 1),
+(20, 'Shipping Info', 'Edit Shipping Condition', 20, 1);
 
 -- --------------------------------------------------------
 
@@ -594,7 +601,7 @@ CREATE TABLE IF NOT EXISTS `counter` (
 --
 
 INSERT INTO `counter` (`startdate`, `counter`) VALUES
-('20120406', 198);
+('20120406', 203);
 
 -- --------------------------------------------------------
 
@@ -1031,9 +1038,10 @@ CREATE TABLE IF NOT EXISTS `hula_our_infos` (
 --
 
 INSERT INTO `hula_our_infos` (`type`, `content`) VALUES
-('conditions', 'co tien thi mua'),
-('about', 'hula soft'),
-('privacy', 'hahah');
+('conditions', '<p style="text-align: center;"><span style="color: rgb(255, 0, 0);"><strong>conditons :&nbsp;co tien thi mua khong mua htyi nghi</strong></span></p>'),
+('about', '<p style="text-align: center;"><span style="color: rgb(255, 0, 0);"><strong>HULATEAM about about hulateam chim chim cho cho<br />\r\n</strong></span></p>'),
+('privacy', '<p style="text-align: center;"><span style="color: rgb(153, 204, 0);"><strong>Privacy:&nbsp;khong di thi ngu</strong></span></p>'),
+('shipping', '<p>ship hang lam thon</p>\r\n<br />');
 
 -- --------------------------------------------------------
 
@@ -1783,9 +1791,16 @@ CREATE TABLE IF NOT EXISTS `sessions` (
 
 INSERT INTO `sessions` (`sesskey`, `expiry`, `value`) VALUES
 ('6od4f4h72ofprtamu7k8kqgrh1', 1333817930, 'sessiontoken|s:32:"c0667b2a0087206632c91c31aab84898";cart|O:12:"shoppingCart":5:{s:8:"contents";a:0:{}s:5:"total";i:0;s:6:"weight";i:0;s:6:"cartID";N;s:12:"content_type";b:0;}language|s:7:"english";languages_id|s:1:"1";currency|s:3:"USD";navigation|O:17:"navigationHistory":2:{s:4:"path";a:3:{i:0;a:4:{s:4:"page";s:9:"index.php";s:4:"mode";s:6:"NONSSL";s:3:"get";a:0:{}s:4:"post";a:0:{}}i:1;a:4:{s:4:"page";s:11:"privacy.php";s:4:"mode";s:6:"NONSSL";s:3:"get";a:0:{}s:4:"post";a:0:{}}i:2;a:4:{s:4:"page";s:12:"shipping.php";s:4:"mode";s:6:"NONSSL";s:3:"get";a:0:{}s:4:"post";a:0:{}}}s:8:"snapshot";a:0:{}}'),
-('os45ab39gj3fdoametsbo6o4b0', 1333821276, 'sessiontoken|s:32:"13356075e39de5d47e5e88328e662755";cart|O:12:"shoppingCart":5:{s:8:"contents";a:0:{}s:5:"total";i:0;s:6:"weight";i:0;s:6:"cartID";N;s:12:"content_type";b:0;}language|s:7:"english";languages_id|s:1:"1";currency|s:3:"USD";navigation|O:17:"navigationHistory":2:{s:4:"path";a:2:{i:0;a:4:{s:4:"page";s:9:"index.php";s:4:"mode";s:6:"NONSSL";s:3:"get";a:0:{}s:4:"post";a:0:{}}i:1;a:4:{s:4:"page";s:12:"shipping.php";s:4:"mode";s:6:"NONSSL";s:3:"get";a:0:{}s:4:"post";a:0:{}}}s:8:"snapshot";a:0:{}}'),
+('7fbgjnboauoqcp0bo4q63ooku2', 1333906744, 'language|s:7:"english";languages_id|s:1:"1";admin|a:2:{s:2:"id";s:1:"1";s:8:"username";s:5:"lamdt";}'),
+('874i1420ljrrbf1bc7m3k6af64', 1333906423, 'sessiontoken|s:32:"e3c5ae15b5fe7166a7a63d3b2b58abd4";cart|O:12:"shoppingCart":5:{s:8:"contents";a:0:{}s:5:"total";i:0;s:6:"weight";i:0;s:6:"cartID";N;s:12:"content_type";b:0;}language|s:7:"english";languages_id|s:1:"1";currency|s:3:"USD";navigation|O:17:"navigationHistory":2:{s:4:"path";a:2:{i:0;a:4:{s:4:"page";s:9:"index.php";s:4:"mode";s:6:"NONSSL";s:3:"get";a:0:{}s:4:"post";a:0:{}}i:1;a:4:{s:4:"page";s:16:"hula_aboutus.php";s:4:"mode";s:6:"NONSSL";s:3:"get";a:0:{}s:4:"post";a:0:{}}}s:8:"snapshot";a:0:{}}'),
+('fgq5ih8a3ns3hvdr2mgea4vns4', 1334199070, 'language|s:7:"english";languages_id|s:1:"1";admin|a:2:{s:2:"id";s:1:"1";s:8:"username";s:5:"lamdt";}'),
+('k418mj2nltcvgo8mi8vqj5aj90', 1334028943, 'language|s:7:"english";languages_id|s:1:"1";admin|a:2:{s:2:"id";s:1:"1";s:8:"username";s:5:"lamdt";}'),
+('lb9k0diat62j58cbgevfj8k5a1', 1333994169, 'sessiontoken|s:32:"d882f2d550bd93bf4b50656e0a367471";cart|O:12:"shoppingCart":4:{s:8:"contents";a:0:{}s:5:"total";i:0;s:6:"weight";i:0;s:12:"content_type";b:0;}language|s:7:"english";languages_id|s:1:"1";currency|s:3:"USD";navigation|O:17:"navigationHistory":2:{s:4:"path";a:1:{i:0;a:4:{s:4:"page";s:9:"index.php";s:4:"mode";s:6:"NONSSL";s:3:"get";a:0:{}s:4:"post";a:0:{}}}s:8:"snapshot";a:0:{}}'),
+('ncuu4j2dt3tilvm704ad15oeu0', 1334114149, 'language|s:7:"english";languages_id|s:1:"1";admin|a:2:{s:2:"id";s:1:"1";s:8:"username";s:5:"lamdt";}'),
+('os45ab39gj3fdoametsbo6o4b0', 1333823250, 'sessiontoken|s:32:"187ef0a97d60d424a839eb032f3dcce0";cart|O:12:"shoppingCart":5:{s:8:"contents";a:0:{}s:5:"total";i:0;s:6:"weight";i:0;s:6:"cartID";N;s:12:"content_type";b:0;}language|s:7:"english";languages_id|s:1:"1";currency|s:3:"USD";navigation|O:17:"navigationHistory":2:{s:4:"path";a:1:{i:0;a:4:{s:4:"page";s:12:"shipping.php";s:4:"mode";s:6:"NONSSL";s:3:"get";a:0:{}s:4:"post";a:0:{}}}s:8:"snapshot";a:0:{}}'),
 ('qdsurkmva4f5geeii387sptm12', 1333818847, 'language|s:7:"english";languages_id|s:1:"1";admin|a:2:{s:2:"id";s:1:"1";s:8:"username";s:5:"lamdt";}'),
-('ug0ru3515vukalaeomc6fp2na3', 1333821364, 'language|s:7:"english";languages_id|s:1:"1";admin|a:2:{s:2:"id";s:1:"1";s:8:"username";s:5:"lamdt";}');
+('sfkce38honnblt1ifgo528bul6', 1333994246, 'language|s:7:"english";languages_id|s:1:"1";admin|a:2:{s:2:"id";s:1:"1";s:8:"username";s:5:"lamdt";}'),
+('ug0ru3515vukalaeomc6fp2na3', 1333823247, 'language|s:7:"english";languages_id|s:1:"1";admin|a:2:{s:2:"id";s:1:"1";s:8:"username";s:5:"lamdt";}');
 
 -- --------------------------------------------------------
 
@@ -1884,7 +1899,7 @@ CREATE TABLE IF NOT EXISTS `whos_online` (
 --
 
 INSERT INTO `whos_online` (`customer_id`, `full_name`, `session_id`, `ip_address`, `time_entry`, `time_last_click`, `last_page_url`) VALUES
-(0, 'Guest', 'os45ab39gj3fdoametsbo6o4b0', '127.0.0.1', '1333818649', '1333819836', '/OSE/Voan-YoYo/shipping.php');
+(0, 'Guest', 'lb9k0diat62j58cbgevfj8k5a1', '127.0.0.1', '1333992729', '1333992729', '/OSE/Voan-YoYo/');
 
 -- --------------------------------------------------------
 
